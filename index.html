@@ -7,30 +7,97 @@
     <style>
         * {
             font-size: 16px;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 
+        }
+        .cabecalho{
+            border: 1px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: start;
         }
         .container {
-            border: 1px solid red;
-            box-shadow: 0.5rem .5rem .3rem .01rem red;
-
+            border: 1px solid rgb(253, 8, 8);
+            box-shadow: 0.5rem .5rem .3rem .01rem rgb(136, 131, 131);
+            height: 35rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: start; /*Para centralizar na vertical*/
+            justify-content: center; /*Para centralizar na horizontal*/
+        }
+        .item {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            padding: 1rem;
+            margin: 1rem;
+            width: 5em;
+            height: 5rem;
+            text-align: center;/*centraliza a escrita*/
+        }
+        .item1 {
+            flex-grow: 1;
+        }
+        .item2 {
+            flex-grow: 2;
+        }
+        .item3 {
+            flex-grow: 3;
+        }
+        .logo{
+            flex-grow: 2;
+        }
+        .titulo-do-site{
+            flex-grow: 12;
+        }
+        .sandwich-menu{
+            flex-grow: 1;
+        }
+        .painel{
+            height: 30rem;
+            display: flex;
+        }
+        .menu-lateral{
+            border: 5px solid greenyellow;
+            padding: 1rem;
+            margin: 1rem;
+            flex-grow: 3;
+        }
+        .parte-principal{
+            border: 5px solid greenyellow;
+            padding: 1rem;
+            margin: 1rem;
+            flex-grow: 11;
+        }
+        .tile{
+            background-color: rgb(255, 218, 218);
+            height: 3rem;
+            margin: .5rem;
+        }
+        .tile:hover{ /*comando para quando o mouse passar no 'azulejo' mudara de cor*/
+            background-color: blue;
+            color:aliceblue;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="item">Item 01</div>
-        <div class="item">Item 02</div>
-        <div class="item">Item 03</div>
-        <div class="item">Item 04</div>
-        <div class="item">Item 05</div>
-        <div class="item">Item 06</div>
-        <div class="item">Item 07</div>
-        <div class="item">Item 08</div>
-        <div class="item">Item 09</div>
-        <div class="item">Item 10</div>
-        <div class="item">Item 11</div>
-        <div class="item">Item 12</div>
-    </div>
-    
+    <header class="cabecalho">
+            <div class="item logo">Logo</div>
+            <div class="item titulo-do-site">Titulo do Site</div>
+            <div class="item sandwich-menu">Sandwich Menu</div>
+    </header>
+    <section class="painel">
+        <nav class="menu-lateral">
+            <a href= "https://www.google.com.br">
+                <div class="tile">item 01</div></a>
+            <a href= "https://www.pucminas.br/destaques/Paginas/default.aspx">
+                <div class="tile">item 02</div></a>
+            <a href= "https://www.microsoft.com">
+                <div class="tile">item 03</div></a>
+            <a href= "https://www.primevideo.com/" target="_blank"><!--Target é para clicar e abrir em outra aba-->
+                <div class="tile">item 04</div></a>
+        </nav>
+        <main class="parte-principal">Parte Principal do Site</main>
+    </section>
 </body>
 </html>
